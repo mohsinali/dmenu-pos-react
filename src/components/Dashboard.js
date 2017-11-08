@@ -1,4 +1,8 @@
 import React from 'react';
+import Header from './header';
+import Categories from './categories';
+import MenuItems from './MenuItems';
+import Cart from './Cart';
 
 class Dashboard extends React.Component {
   constructor(props){
@@ -8,7 +12,18 @@ class Dashboard extends React.Component {
   render(){
     return (
       <div>
-        <h1>Rendering Dashboard comp</h1>
+        <div id="left-pane">
+          <p>Left Pane</p>
+          <Header />
+          <Categories />
+          <MenuItems />
+        </div>
+
+        <div id='right-pane'>
+          <p>Right Pane</p>
+          <Cart />
+
+        </div>
       </div>
     );
   }
