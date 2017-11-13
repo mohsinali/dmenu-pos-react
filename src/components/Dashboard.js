@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import Header from './header';
 import Categories from './categories';
 import MenuItems from './MenuItems';
@@ -13,6 +15,7 @@ class Dashboard extends React.Component {
     return (
       <div>
         <div id="left-pane">
+          <Link to='/'>Home</Link>
           <p>Left Pane</p>
           <Header />
           <Categories />
