@@ -1,9 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Dashboard from './components/Dashboard';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-console.log('Using React');
+import Dashboard from './components/Dashboard';
+import TableNumber from './components/TableNumber';
+
+const routes = (
+  <BrowserRouter>
+    <div>
+      <Route path='/' component={TableNumber} exact={true} />
+      <Route path='/dashboard' component={Dashboard} />
+    </div>
+  </BrowserRouter>
+)
 
 // const template = <p>This is my first.</p>;
 // const template = React.createElement('p', {}, 'Testing');
-ReactDOM.render(<Dashboard />, document.getElementById('app'));
+ReactDOM.render(routes, document.getElementById('app'));
