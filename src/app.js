@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
 import AppRouter from './routers/AppRouter';
 import TopNav from './components/TopNav';
@@ -13,5 +14,11 @@ store.dispatch({type: 'ADD_CATEGORY', category: {id: 26, name: "Steaks"}});
 
 console.log(store.getState());
 
-ReactDOM.render(<AppRouter />, document.getElementById('app'));
+const jsx = (
+  <Provider store={store}>
+    <AppRouter />
+  </Provider>
+)
+
+ReactDOM.render(jsx, document.getElementById('app'));
 ReactDOM.render(<TopNav />, document.getElementById('top-nav'));

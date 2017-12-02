@@ -20,6 +20,7 @@ class Dashboard extends React.Component {
             <div className="ibox-title">
               <h2>Table #14</h2>
             </div>
+            <Categories />
 
             <div className="ibox-content">
             <div className="row">
@@ -142,22 +143,6 @@ class Dashboard extends React.Component {
         </div>
 
       </div>
-
-      // <div>
-      //   <div id="left-pane">
-      //     <Link to='/'>Home</Link>
-      //     <p>Left Pane</p>
-      //     <Header />
-      //     <Categories />
-      //     <MenuItems />
-      //   </div>
-
-      //   <div id='right-pane'>
-      //     <p>Right Pane</p>
-      //     <Cart />
-
-      //   </div>
-      // </div>
     );
   }
 }
