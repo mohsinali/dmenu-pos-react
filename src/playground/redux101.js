@@ -2,7 +2,6 @@ import { createStore } from 'redux';
 
 
 const categoryReducerDefaultState = [];
-
 const categoryReducer = (state = categoryReducerDefaultState, action) => {
   switch(action.type){
     case 'ADD_CATEGORY':
