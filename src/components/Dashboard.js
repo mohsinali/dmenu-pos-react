@@ -20,65 +20,9 @@ class Dashboard extends React.Component {
             <div className="ibox-title">
               <h2>Table #14</h2>
             </div>
-            <Categories />
-
-            <div className="ibox-content">
-            <div className="row">
-                <div className="col-lg-3">
-                    <div className="widget style1 lazur-bg">
-                        <div className="row vertical-align">
-                            <div className="col-xs-12 text-center">
-                                <h2>Starters</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="col-lg-3">
-                    <div className="widget style1 lazur-bg">
-                        <div className="row vertical-align">
-                            
-                            <div className="col-xs-12 text-center">
-                                <h2>Our Specialities</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-3">
-                    <div className="widget style1 lazur-bg">
-                        <div className="row vertical-align">
-                            
-                            <div className="col-xs-12 text-center">
-                                <h2>Soups</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-3">
-                    <div className="widget style1 lazur-bg">
-                        <div className="row vertical-align">
-                            
-                            <div className="col-xs-12 text-center">
-                                <h2>Salads</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* <div className="col-lg-2">
-                    <div className="widget style1 lazur-bg">
-                        <div className="row vertical-align">
-                            
-                            <div className="col-xs-12 text-right">
-                                <h2>Chinese</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>                 */}
-            </div>
-
             
-
-            </div>
+            <Categories />
+            
           </div>
         </div>
 

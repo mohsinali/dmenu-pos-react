@@ -1,10 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import CategoryItem from './CategoryItem';
+
 const Categories = (props) => (
   <div>
-    <h1>Categories List</h1>
-    {props.categories.length}
+    <div className="ibox-content">
+      <div className="row">
+        {
+          props.categories.map((cat) => (
+            <CategoryItem key={cat.id} {...cat} />
+          ))
+        }
+      </div>
+    </div>
+
     
   </div>
 );

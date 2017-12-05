@@ -9,8 +9,10 @@ import TopNav from './components/TopNav';
 
 const store = configureStore();
 
-store.dispatch({type: 'ADD_CATEGORY', category: {id: 25, name: "Pakistani"}});
-store.dispatch({type: 'ADD_CATEGORY', category: {id: 26, name: "Steaks"}});
+store.dispatch({type: 'ADD_CATEGORY', category: {id: 1, name: "Starters"}});
+store.dispatch({type: 'ADD_CATEGORY', category: {id: 2, name: "Our Specialities"}});
+store.dispatch({type: 'ADD_CATEGORY', category: {id: 3, name: "Soups"}});
+store.dispatch({type: 'ADD_CATEGORY', category: {id: 4, name: "Salads"}});
 
 console.log(store.getState());
 
