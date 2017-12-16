@@ -2,22 +2,20 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 class TableNumber extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      t_no: ''
-    }
-    this.onTableNoChange = this.onTableNoChange.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
+  
+  state = {
+    t_no: ''
   }
 
-  onTableNoChange(e){
+  onTableNoChange = (e) => {
     const t_no = e.target.value;
     this.setState({t_no});
   }
-  onSubmit(e){
+
+  onSubmit = (e) => {
     e.preventDefault();
-    this.props.history.push('/dashboard?t_no=' + t_no);
+    this.props.dispatch({type: 'SET_TABLE_NUMBER', table_no: this.state.t_no});
+    this.props.history.push('/dashboard');
   }
 
   render(props) {

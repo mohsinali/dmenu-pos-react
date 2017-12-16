@@ -6,7 +6,7 @@ const categoryReducer = (state = categoryReducerDefaultState, action) => {
       return [
         ...state,
         action.category
-      ];
+      ];    
 
     default:
       return state;
