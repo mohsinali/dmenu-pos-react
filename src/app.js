@@ -14,7 +14,7 @@ store.dispatch({type: 'ADD_CATEGORY', category: {id: 2, name: "Our Specialities"
 store.dispatch({type: 'ADD_CATEGORY', category: {id: 3, name: "Soups"}});
 store.dispatch({type: 'ADD_CATEGORY', category: {id: 4, name: "Salads"}});
 
-console.log(store.getState());
+// console.log(store.getState());
 
 const jsx = (
   <Provider store={store}>
