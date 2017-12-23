@@ -7,22 +7,22 @@ const Categories = (props) => (
   <div>
     <div className="ibox-content">
       <div className="row">
-        {
+        {          
           props.categories.map((cat) => (
-            <CategoryItem key={cat.id} {...cat} />
+            <CategoryItem onCategoryClick={(category_id) => {
+              console.log(`Selected: ${category_id}`);
+            }} key={cat.id} {...cat} />
           ))
         }
       </div>
     </div>
-
-    
   </div>
 );
 
-const mapStateToProps = (state) => {
-  
+const mapStateToProps = (state) => {  
   return {
     categories: state.categories
   };
 }
+
 export default connect(mapStateToProps)(Categories);
