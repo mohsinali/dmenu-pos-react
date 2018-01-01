@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { setSelectedCategory } from '../actions/Category_Actions';
 import CategoryItem from './CategoryItem';
 
 const Categories = (props) => (
@@ -11,6 +12,7 @@ const Categories = (props) => (
           props.categories.map((cat) => (
             <CategoryItem onCategoryClick={(category_id) => {
               console.log(`Selected: ${category_id}`);
+              props.dispatch(setSelectedCategory(category_id));
             }} key={cat.id} {...cat} />
           ))
         }
