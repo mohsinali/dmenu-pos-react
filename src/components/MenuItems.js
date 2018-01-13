@@ -1,11 +1,20 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 class MenuItems extends React.Component {
   render() {
     return (
-      <div>Menu Items</div>
+      <div>
+        <h1>Menu Items {this.props.selected_category_id}</h1>
+      </div>
     )
   }
 }
 
-export default MenuItems;
+const mapStateToProps = (state) => {
+  return {
+    selected_category_id: state.selected_category
+  };
+}
+
+export default connect(mapStateToProps)(MenuItems);

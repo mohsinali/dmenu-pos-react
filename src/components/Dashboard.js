@@ -7,7 +7,7 @@ import Categories from './categories';
 import MenuItems from './MenuItems';
 import Cart from './Cart';
 
-class Dashboard extends React.Component {  
+class Dashboard extends React.Component {
 
   render(props) {
     return (
@@ -19,6 +19,7 @@ class Dashboard extends React.Component {
             </div>
             
             <Categories />
+            <MenuItems />
             
           </div>
         </div>
