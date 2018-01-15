@@ -1,17 +1,23 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { productsByCategory } from '../selectors/Products_Selector';
+import ProductItem from './ProductItem_Component';
 
 class MenuItems extends React.Component {
   render() {
     return (
       <div>
-        <h1>Menu Items {this.props.selected_category_id}</h1>        
-        {          
-          productsByCategory(this.props.products, this.props.selected_category_id).map((p) => (
-            <div key={p.id}>Category# {p.category_id} - {p.name}</div>
-          ))
-        }
+        <div>
+          <div className="ibox-content">
+            <div className="row">
+              {          
+                productsByCategory(this.props.products, this.props.selected_category_id).map((p) => (
+                  <ProductItem product={p} />
+                ))
+              }
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
