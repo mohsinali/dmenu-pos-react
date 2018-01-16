@@ -12,7 +12,7 @@ class MenuItems extends React.Component {
             <div className="row">
               {          
                 productsByCategory(this.props.products, this.props.selected_category_id).map((p) => (
-                  <ProductItem product={p} />
+                  <ProductItem product={p} key={p.id} />
                 ))
               }
             </div>

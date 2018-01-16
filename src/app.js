@@ -19,6 +19,7 @@ store.dispatch({type: 'ADD_PRODUCT', product: {id: 2, name: 'Chicken Corn Soup(S
 store.dispatch({type: 'ADD_PRODUCT', product: {id: 3, name: 'Spicy Mexican Wings', category_id: 1}});
 store.dispatch({type: 'ADD_PRODUCT', product: {id: 4, name: 'Fresh Green Salad', category_id: 4}});
 
+store.dispatch({type: 'ADD_CART_ITEM', item: {product_id: 2, name: 'Chicken Corn Soup(Single)', quantitiy: 1, price: 200}});
 
 // console.log(store.getState());
 
