@@ -10,8 +10,7 @@ const Categories = (props) => (
       <div className="row">
         {          
           props.categories.map((cat) => (
-            <CategoryItem onCategoryClick={(category_id) => {
-              console.log(`Selected: ${category_id}`);
+            <CategoryItem onCategoryClick={(category_id) => {              
               props.dispatch(setSelectedCategory(category_id));
             }} key={cat.id} {...cat} />
           ))

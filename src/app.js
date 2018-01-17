@@ -14,12 +14,12 @@ store.dispatch({type: 'ADD_CATEGORY', category: {id: 2, name: "Our Specialities"
 store.dispatch({type: 'ADD_CATEGORY', category: {id: 3, name: "Soups"}});
 store.dispatch({type: 'ADD_CATEGORY', category: {id: 4, name: "Salads"}});
 
-store.dispatch({type: 'ADD_PRODUCT', product: {id: 1, name: 'Hot n Sour Soup(Single Red)', category_id: 3}});
-store.dispatch({type: 'ADD_PRODUCT', product: {id: 2, name: 'Chicken Corn Soup(Single)', category_id: 3}});
-store.dispatch({type: 'ADD_PRODUCT', product: {id: 3, name: 'Spicy Mexican Wings', category_id: 1}});
-store.dispatch({type: 'ADD_PRODUCT', product: {id: 4, name: 'Fresh Green Salad', category_id: 4}});
+store.dispatch({type: 'ADD_PRODUCT', product: {id: 1, name: 'Hot n Sour Soup(Single Red)', price: 100, category_id: 3}});
+store.dispatch({type: 'ADD_PRODUCT', product: {id: 2, name: 'Chicken Corn Soup(Single)', price: 50, category_id: 3}});
+store.dispatch({type: 'ADD_PRODUCT', product: {id: 3, name: 'Spicy Mexican Wings', price: 60.50, category_id: 1}});
+store.dispatch({type: 'ADD_PRODUCT', product: {id: 4, name: 'Fresh Green Salad', price: 20.25, category_id: 4}});
 
-store.dispatch({type: 'ADD_CART_ITEM', item: {product_id: 2, name: 'Chicken Corn Soup(Single)', quantitiy: 1, price: 200}});
+store.dispatch({type: 'ADD_CART_ITEM', item: {product_id: 2, name: 'Chicken Corn Soup(Single)', quantity: 1, price: 200}});
 
 // console.log(store.getState());
 
