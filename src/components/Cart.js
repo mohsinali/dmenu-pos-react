@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import CartItem from './CartItem_Component';
 import CartFooter_Component from './CartFooter_Component';
-import { addCartItem, removeCartItem } from '../actions/Cart_Actions';
+import { addCartItem, removeCartItem, deleteCartItem } from '../actions/Cart_Actions';
 
 class Cart extends React.Component {
   
@@ -27,6 +27,10 @@ class Cart extends React.Component {
     this.props.dispatch(removeCartItem(product_id));
   }
 
+  handleDelete = (product_id) => {
+    this.props.dispatch(deleteCartItem(product_id));
+  }
+
   render() {
     return (
       <div className="ibox float-e-margins">
@@ -43,6 +47,9 @@ class Cart extends React.Component {
               }}
               onMinusClick={(product_id) => {
                 this.handleMinus(product_id);
+              }}
+              onDeleteClick={(product_id) => {
+                this.handleDelete(product_id);
               }}
               {...item}
               ></CartItem>

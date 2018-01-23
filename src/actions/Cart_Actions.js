@@ -11,3 +11,10 @@ export const removeCartItem = (product_id) => (
     product_id: product_id
   }
 );
+
+export const deleteCartItem = (product_id) => (
+  {
+    type: 'DELETE_CART_ITEM',
+    product_id: product_id
+  }
+);

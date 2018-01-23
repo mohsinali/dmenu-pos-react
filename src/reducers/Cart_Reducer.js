@@ -47,6 +47,10 @@ export default (state = cartReducerDefaultState, action) => {
       });
       break;
 
+    case 'DELETE_CART_ITEM':      
+      return state.filter( item => item.product_id != action.product_id);
+      break;
+
     default:
       return state;
   }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CartItem = ({onPlusClick, onMinusClick, name, price, quantity, product_id}) => (
+const CartItem = ({onPlusClick, onMinusClick, onDeleteClick, name, price, quantity, product_id}) => (
   <div className="ibox-content">
     <div className="row">
       <div className="col-xs-4">
@@ -9,7 +9,10 @@ const CartItem = ({onPlusClick, onMinusClick, name, price, quantity, product_id}
           Without cheese
           With Garlic
         </p>
-        <h4>Notes +</h4>
+        <h4>Notes <i className="fa fa-plus"></i></h4>
+        <i className="fa fa-trash" onClick={() => {
+          onDeleteClick(product_id)
+        }}></i>
       </div>
 
       <div className="col-xs-4">
