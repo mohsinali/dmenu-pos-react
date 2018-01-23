@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import CartItem from './CartItem_Component';
 import CartFooter_Component from './CartFooter_Component';
-import { addCartItem } from '../actions/Cart_Actions';
+import { addCartItem, removeCartItem } from '../actions/Cart_Actions';
 
 class Cart extends React.Component {
   
@@ -19,12 +19,12 @@ class Cart extends React.Component {
       if(p.id === product_id){
         return p;
       }
-    })    
+    })
     this.props.dispatch(addCartItem(product));
   }
 
-  handleMinus = () => {
-    console.log("Minus");
+  handleMinus = (product_id) => {
+    this.props.dispatch(removeCartItem(product_id));
   }
 
   render() {
@@ -36,9 +36,16 @@ class Cart extends React.Component {
         </div>        
         {                    
           this.props.cart.map((item) => (
-            <CartItem key={item.product_id} {...item} onPlusClick={(product_id) => {
-              this.handlePlus(product_id);
-            }}></CartItem>
+            <CartItem 
+              key={item.product_id} 
+              onPlusClick={(product_id) => {
+                this.handlePlus(product_id);
+              }}
+              onMinusClick={(product_id) => {
+                this.handleMinus(product_id);
+              }}
+              {...item}
+              ></CartItem>
           ))
         }
         <CartFooter_Component total={this.getTotal(this.props.cart)} />

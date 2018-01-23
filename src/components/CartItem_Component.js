@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CartItem = ({onPlusClick, name, price, quantity, product_id}) => (
+const CartItem = ({onPlusClick, onMinusClick, name, price, quantity, product_id}) => (
   <div className="ibox-content">
     <div className="row">
       <div className="col-xs-4">
@@ -18,7 +18,9 @@ const CartItem = ({onPlusClick, name, price, quantity, product_id}) => (
           onPlusClick(product_id)
         }}>+</span>&nbsp;
           x{quantity}&nbsp;
-          <span className="label label-success">-</span>
+          <span className="label label-success" onClick={() => {
+            onMinusClick(product_id)
+          }}>-</span>
         </p>
       </div>
       <div className="col-xs-4">                  
